@@ -1,0 +1,27 @@
+.intro_main {
+  display: flex;
+  width: 70%;
+  border: 1px dotted black;
+  justify-content: space-between;
+}
+#title {
+  color: #0041b7;
+  font-size: 32px;
+  font-weight: bolder;
+}
+.main_text {
+  padding-right: 7%;
+}
+.right {
+  text-align: right;
+}
+.boss_img {
+  margin-right: 5%;
+}
+.introduction {
+  margin-left: 20%;
+}
+#intro_rotc1 {
+  background-color: #064579;
+  color: white;
+}

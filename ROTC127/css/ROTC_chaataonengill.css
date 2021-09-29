@@ -1,0 +1,11 @@
+h2 {
+  font-size: 32px;
+}
+#yodo {
+  margin-left: 20%;
+}
+/* 버튼 색 변경 */
+#yodo1 {
+  background-color: #064579;
+  color: white;
+}
