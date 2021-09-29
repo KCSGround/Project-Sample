@@ -11,49 +11,43 @@ import Weather from "./Weather";
 const API_KEY = "b6c87133244afe70f55b034dbb324a9a";
 
 export default class extends React.Component {
-  state = {
-    isLoading: true,
-  };
+    state = {
+        isLoading: true,
+    };
 
-  getWeather = async (latitude, longitude) => {
-    const {
-      data: {
-        main: { temp },
-        weather,
-      },
-    } = await axios.get(
-      `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
-    );
-    this.setState({
-      isLoading: false,
-      condition: weather[0].main,
-      temp,
-    });
-  };
-  getLocation = async () => {
-    try {
-      await Location.requestPermissionsAsync();
-      const {
-        coords: { latitude, longitude },
-      } = await Location.getCurrentPositionAsync();
+    getWeather = async (latitude, longitude) => {
+        const {
+            data: {
+                main: { temp },
+                weather,
+            },
+        } = await axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`);
+        this.setState({
+            isLoading: false,
+            condition: weather[0].main,
+            temp,
+        });
+    };
+    getLocation = async () => {
+        try {
+            await Location.requestPermissionsAsync();
+            const {
+                coords: { latitude, longitude },
+            } = await Location.getCurrentPositionAsync();
 
-      this.getWeather(latitude, longitude);
-      console.log(latitude, longitude);
-    } catch (error) {
-      Alert.alert("Can't find you.", "So sad!");
+            this.getWeather(latitude, longitude);
+            console.log(latitude, longitude);
+        } catch (error) {
+            Alert.alert("Can't find you.", "So sad!");
+        }
+    };
+
+    componentDidMount() {
+        this.getLocation();
+        console.log("Running!");
     }
-  };
-
-  componentDidMount() {
-    this.getLocation();
-    console.log("Running!");
-  }
-  render() {
-    const { isLoading, temp, condition } = this.state;
-    return isLoading ? (
-      <Loading />
-    ) : (
-      <Weather temp={Math.round(temp)} condition={condition} />
-    );
-  }
+    render() {
+        const { isLoading, temp, condition } = this.state;
+        return isLoading ? <Loading /> : <Weather temp={Math.round(temp)} condition={condition} />;
+    }
 }
