@@ -1,0 +1,49 @@
+main {
+  /* body의 width, height 상속 */
+  width: 100%;
+  height: auto;
+  background-color: tomato;
+}
+.content-bundle {
+  /* main의 width, height 상속 */
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+  background-color: greenyellow;
+  display: flex;
+  flex-direction: column;
+}
+.content-header {
+  /* .content-bundle의 width, height 상속 */
+  width: 100%;
+  height: 10%;
+  background-color: aquamarine;
+  border-bottom: 3px dotted black;
+  margin-bottom: 1%;
+}
+.content-header-title {
+  margin-left: 2%;
+}
+.content-header-title-font {
+  font-size: 40px;
+}
+.content-Article {
+  width: 100%;
+
+  background-color: blueviolet;
+  /* flex를 통해 상하 남는 마진 제거 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.test1 {
+  width: 100%;
+  height: 10%;
+  background-color: orange;
+}
+.img-size {
+  width: 100%;
+  height: 100%;
+  border: 3px inset blue;
+  box-sizing: border-box;
+}

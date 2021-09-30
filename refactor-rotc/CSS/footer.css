@@ -1,0 +1,23 @@
+/* Footer */
+
+/* 제일 밑에 있는 footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  margin-right: 10%;
+  background-color: white;
+  width: 100%;
+  height: 130px;
+
+  box-sizing: border-box;
+  border-top: 20px solid #2d3f53;
+  color: #979797;
+}
+
+/* footer 에 있는 logo img */
+.footer-KNUlogo {
+  padding: 2em;
+  margin-right: 1em;
+  padding-right: 10%;
+}

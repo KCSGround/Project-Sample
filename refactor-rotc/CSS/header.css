@@ -1,0 +1,98 @@
+/* 헤더 전체 감싸는 ul */
+.header-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* 헤더 왼쪽 강원대학교 이미지 a*/
+.header-navigation-img {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+
+/* 헤더 왼쪽 타이틀 이미지 img 태그 */
+#header-logo {
+  height: 50px;
+}
+
+/* 헤더 왼쪽 타이틀 div */
+.header-navigation-left-title {
+  width: 200px;
+  text-align: center;
+}
+
+/* 헤더 오른쪽 메뉴 Ul */
+.header-navigation-right-ul {
+  display: flex;
+  align-items: center;
+}
+
+/* 헤더 오른쪽 두번째 메뉴 div (ROTC 소개) */
+.header-navigation-right-div-2 {
+  width: 150px;
+  text-align: center;
+}
+
+/* 헤더 오른쪽 세번째 메뉴 div (찾아오는 길) */
+.header-navigation-right-div-3 {
+  width: 150px;
+  text-align: center;
+}
+
+/* 드롭다운 */
+/* 드롭다운 */
+/* 드롭다운 */
+/* 드롭다운 */
+/* 드롭다운 */
+
+/* 드롭다운 버튼을 사용하기 위한 틀 div */
+.header-navigation-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+}
+
+/* 드롭다운 버튼 button */
+.header-navigation-dropdown-button {
+  background-color: rgb(240, 240, 248);
+  color: black;
+  font-size: 22px;
+  border: none;
+}
+
+/* 드롭다운 될 때 생성되는 리스트를 담는 div */
+.header-navigation-dropdown-container {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* 드롭다운 안에 있는 항목들 a */
+.header-navigation-dropdown-container a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+/* 드롭다운 안에 있는 항목을 올려놨을 때 a:hover */
+.header-navigation-dropdown-container a:hover {
+  background-color: #ddd;
+}
+
+/* 드롭다운 담는 div 에 올려놨을 때, 드롭다운 된 항목에 올려놨을 때 */
+.header-navigation-dropdown:hover .header-navigation-dropdown-container {
+  display: block;
+}
+
+/* 드롭다운 담는 div 에 올려놨을 때, 드롭다운이 되는 버튼 button */
+.header-navigation-dropdown:hover .header-navigation-dropdown-button {
+  background-color: rgb(240, 240, 248);
+}
